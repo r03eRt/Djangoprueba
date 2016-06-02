@@ -26,7 +26,7 @@ class QuestionAdmin(admin.ModelAdmin):
     #anado a lista de preguntas los campos antes de entrar en la individual
     list_display = ('question_text', 'pub_date', )
     #muestri filtro por campo puba_date
-    list_filter = ('pub_date')
+    list_filter = ['pub_date']
     #anado modulo de busqueda a la pagina
     search_fields = ['question_text']
 
