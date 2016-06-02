@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+from datetime import datetime, timedelta, tzinfo
+
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200,verbose_name='Pregunta')
@@ -10,6 +12,8 @@ class Question(models.Model):
     #devuelvo el nombre para mostarrlo en la vista
     def __unicode__(self):
         return self.question_text
+
+
 
     #preguntas de fuera
     class Meta:
